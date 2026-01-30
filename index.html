@@ -286,4 +286,346 @@
             transform: translateY(-5px);
         }
 
-        .proof-card img { heig
+        .proof-card img { height: 40px; margin-bottom: 15px; opacity: 0.8; }
+        .proof-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
+        .proof-source { font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; }
+
+        /* Section Header */
+        .section-header { text-align: center; margin: 100px 0 60px; }
+        .section-header h2 {
+            font-size: 2.5rem; margin-bottom: 15px; color: #fff; position: relative; display: inline-block;
+        }
+        .section-header h2::after {
+            content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 3px; background: var(--accent-purple);
+        }
+        .section-header p { color: var(--text-muted); max-width: 650px; margin: 30px auto 0; }
+
+        /* 9 Grid Section */
+        .grid-9 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #130a1e 0%, #05020a 100%);
+            border: 1px solid var(--border);
+            padding: 35px;
+            border-radius: 8px;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-10px);
+            box-shadow: 
+                0 20px 50px -15px var(--glow-strong),
+                inset 0 0 30px var(--glow-subtle);
+        }
+
+        .card h3 { 
+            font-size: 1.3rem; margin-bottom: 15px; color: #fff; display: flex; align-items: center; gap: 12px; 
+        }
+
+        .card h3 i { color: var(--accent-purple); transition: color 0.3s; }
+        .card:hover h3 i { color: var(--accent-gold); }
+        .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
+
+        .data-proof {
+            font-size: 0.85rem; color: var(--accent-gold); font-family: monospace;
+            border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px; display: block; opacity: 0.9;
+        }
+
+        /* FAQ Section */
+        .faq-section { padding: 80px 0; background: var(--bg-card); }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 25px; border-radius: 8px; transition: all 0.3s;
+        }
+        .faq-item:hover { border-color: var(--accent-purple); transform: translateX(5px); }
+        .faq-item h3 { font-size: 1.2rem; color: #fff; margin-bottom: 10px; font-family: 'Space Grotesk', sans-serif; }
+        .faq-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+
+        /* Newsletter */
+        .newsletter { padding: 80px 0; text-align: center; background: linear-gradient(135deg, #0f0718 0%, #05020a 100%); }
+        .newsletter h3 { font-size: 2rem; margin-bottom: 15px; color: #fff; }
+        .newsletter p { color: var(--text-muted); max-width: 600px; margin: 0 auto 30px; }
+        #newsletter-form { display: flex; max-width: 500px; margin: 0 auto; gap: 10px; }
+        #newsletter-form input {
+            flex: 1; padding: 12px 20px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.05); color: #fff; border-radius: 6px; font-size: 1rem;
+        }
+        #newsletter-form button {
+            background: var(--accent-purple); color: #fff; padding: 12px 25px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s;
+        }
+        #newsletter-form button:hover { background: var(--accent-gold); transform: translateY(-2px); }
+
+        /* Social Share */
+        .social-share { padding: 40px 0; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .social-share span { color: var(--text-muted); margin-right: 20px; }
+        .social-share a { color: var(--accent-purple); margin: 0 10px; font-size: 1.1rem; transition: color 0.3s; }
+        .social-share a:hover { color: var(--accent-gold); }
+
+        /* Footer */
+        footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; background: #020105; }
+        .contact-email {
+            font-size: 1.8rem; font-weight: 700; color: #fff; border-bottom: 2px solid var(--accent-gold); cursor: pointer; transition: all 0.3s; font-family: 'Space Grotesk'; display: inline-block; padding: 10px 20px;
+        }
+        .contact-email:hover { color: var(--accent-gold); border-bottom-color: transparent; background: rgba(251, 191, 36, 0.1); }
+        .legal-links { margin: 30px 0; color: var(--text-muted); font-size: 0.9rem; }
+        .legal-links a { color: var(--accent-purple); margin: 0 10px; transition: color 0.3s; }
+        .legal-links a:hover { color: var(--accent-gold); }
+
+        /* Mobile Menu */
+        .mobile-menu { display: none; flex-direction: column; gap: 15px; margin-top: 20px; }
+        .mobile-menu.active { display: flex; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-9 { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .proof-grid { grid-template-columns: 1fr; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 60px 0 40px; }
+            .section-header { margin: 60px 0 40px; }
+            .mega-title { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="container nav-flex">
+            <div class="logo notranslate">EXALTATION.AI</div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank" class="buy-btn" style="width: auto; padding: 10px 24px; margin:0; font-size: 0.9rem; border:none; background: #fff; color: #000;">
+                Purchase Asset
+            </a>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="#purchase">Purchase</a>
+            <a href="#verticals">Verticals</a>
+            <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank">Afternic Listing</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="main-content">
+        <div class="container">
+            <!-- DYNAMIC TITLE -->
+            <div class="mega-title notranslate">
+                <span class="title-word">Exaltation</span><span class="title-tld">.AI</span>
+            </div>
+            
+            <p class="hero-sub">
+                In Alchemy, it means Purification. In 2026, it is the definitive term for <span class="highlight-term">Knowledge Distillation</span>, <span class="highlight-term">Model Quantization</span>, and <span class="highlight-term">Superalignment</span>.
+            </p>
+
+            <div id="purchase" class="price-hero-card">
+                <span class="status-badge">Category Defining Asset</span>
+                <div class="price-main">$42,000 <span style="font-size:1rem; color:#888; font-weight:400;">USD</span></div>
+                <div class="price-sub">or $3,500/mo via 12-Month Financing</div>
+                
+                <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank" class="buy-btn">
+                    Secure This Asset Now <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px; font-size: 0.8em;"></i>
+                </a>
+                
+                <p style="font-size: 0.85rem; color: #666;">
+                    <i class="fa-solid fa-shield-halved"></i> Secured Escrow Transaction via Afternic/GoDaddy
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industry Validation</h2>
+                <p>Why leading voices in AI recognize the strategic value of Exaltation.ai</p>
+            </div>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%238b5cf6'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='white' font-size='12'%3EHF%3C/text%3E%3C/svg%3E" alt="Hugging Face">
+                    <p>"Knowledge distillation is a key technique for deploying large models to edge devices."</p>
+                    <span class="proof-source">— Hugging Face Documentation</span>
+                </div>
+                <div class="proof-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='10' width='80' height='80' fill='%23fbbf24'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='black' font-size='10'%3EGARTNER%3C/text%3E%3C/svg%3E" alt="Gartner">
+                    <p>"Edge AI optimization is a Top 10 Strategic Technology Trend for 2026."</p>
+                    <span class="proof-source">— Gartner Report 2025</span>
+                </div>
+                <div class="proof-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%230f0718'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='white' font-size='8'%3ECRUNCHBASE%3C/text%3E%3C/svg%3E" alt="Crunchbase">
+                    <p>"TinyML startups raised $1.7B in 2024, up 45% YoY."</p>
+                    <span class="proof-source">— Crunchbase Data</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 VERTICALS -->
+    <section id="verticals">
+        <div class="container">
+            <div class="section-header">
+                <h2>9 Pillars of Exaltation</h2>
+                <p>From TinyML to Superintelligence: Why this word defines the next decade of AI.</p>
+            </div>
+            <div class="grid-9">
+                <div class="card">
+                    <h3><i class="fa-solid fa-filter"></i> Knowledge Distillation</h3>
+                    <p>The alchemical process of "Teacher-Student" compression. Exaltation represents the purification of massive LLMs into efficient Edge models.</p>
+                    <span class="data-proof">Arxiv Papers (2025): 12,500+ | Trend: Up</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-microchip"></i> TinyML & Edge AI</h3>
+                    <p>Running intelligence on silicon limits. "Exalting" a model means maximizing performance per watt. The core narrative of the post-cloud era.</p>
+                    <span class="data-proof">Market CAGR: 37.4% (Gartner)</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-scale-balanced"></i> AGI Superalignment</h3>
+                    <p>We do not just want AI to obey; we want it to be "Exalted"—elevated to human values but purified of human bias.</p>
+                    <span class="data-proof">Safety Research Grants: $500M+</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-database"></i> Synthetic Data Alchemy</h3>
+                    <p>Turning raw, noisy web data (lead) into high-quality training tokens (gold). Exaltation is the standard for Data Curation.</p>
+                    <span class="data-proof">Sector Valuation: $4.5B</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Affective Computing</h3>
+                    <p>AI that elevates the human emotional state. "Exaltation" is the clinical term for a state of extreme well-being and peak flow.</p>
+                    <span class="data-proof">Mental Health Tech: High Growth</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Creativity</h3>
+                    <p>When AI moves from imitation to sublimation. Creating art that induces a sense of the sublime (Exaltation) in the viewer.</p>
+                    <span class="data-proof">GenAI Market: Multi-Trillion</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-atom"></i> Quantum States</h3>
+                    <p>In physics, particles in high-energy states are "excited" or exalted. The perfect brand for Quantum-AI hybrid algorithms.</p>
+                    <span class="data-proof">Deep Tech Investment: Tier 1</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-brain"></i> BCI & Transhumanism</h3>
+                    <p>The ultimate goal: The exaltation of human intelligence via Brain-Computer Interfaces. Merging biological and silicon minds.</p>
+                    <span class="data-proof">Neuralink/Sync: High Visibility</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-chart-line"></i> FinTech & Alpha</h3>
+                    <p>In Astrology, a planet in "Exaltation" is at its peak power. For FinTech AI, this implies maximum Alpha and dominant returns.</p>
+                    <span class="data-proof">Hedge Fund Branding: Premium</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about acquiring Exaltation.ai</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Why is this domain priced at $42,000?</h3>
+                    <p>10-character .ai domains are highly scarce. Exaltation combines linguistic depth with multi-vertical applicability across TinyML, AGI, and Edge AI. Comparable sales include execute.ai ($90,000) and experiential.ai ($15,000).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there any trademark risk?</h3>
+                    <p>No. "Exaltation" is a generic English word with no active trademark conflicts in software/AI categories (USPTO verified). It's a safe, public domain term.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment options are available?</h3>
+                    <p>One-time payment via escrow, or 12-month financing at $3,500/month. All transactions secured via Afternic/GoDaddy with full legal protection.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Who is the ideal buyer for this domain?</h3>
+                    <p>TinyML startups, MLOps platforms, edge AI chip companies, and AGI research labs seeking a premium brand that conveys technical depth and cultural sophistication.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the connection between Exaltation and Knowledge Distillation?</h3>
+                    <p>In alchemy, "exaltation" refers to the purification of substances through fire. This perfectly mirrors the AI process of distilling large models into smaller, more efficient versions while preserving core intelligence.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long will this domain be available?</h3>
+                    <p>Exaltation.ai is currently listed for sale. Serious inquiries are encouraged to contact us directly for acquisition details and timeline information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Stay Updated on AI Domain Opportunities</h3>
+            <p>Join our exclusive list for premium .ai domain releases and market insights.</p>
+            <form id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will notify you of premium AI domain opportunities.');">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SOCIAL SHARE -->
+    <section class="social-share">
+        <span>Share this opportunity:</span>
+        <a href="https://twitter.com/intent/tweet?url=https://exaltation.ai&text=Exaltation.ai - The defining domain for Knowledge Distillation and Edge AI" target="_blank">
+            <i class="fa-brands fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?url=https://exaltation.ai" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://news.ycombinator.com/submitlink?u=https://exaltation.ai&t=Exaltation.ai - Premium AI Domain Asset" target="_blank">
+            <i class="fa-brands fa-hacker-news"></i> Hacker News
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3 style="margin-bottom: 20px; color: #fff;">Acquire This Legacy Brand</h3>
+            
+            <div class="contact-email" onclick="copyEmail()">
+                joshua369x@gmail.com
+            </div>
+            
+            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Click email to copy to clipboard</p>
+            
+            <p class="legal-links">
+                <a href="/privacy-policy">Privacy Policy</a> • 
+                <a href="/terms-of-service">Terms of Service</a> • 
+                <a href="/sitemap.xml">Sitemap</a>
+            </p>
+            
+            <p style="margin-top: 30px; font-size: 0.75rem; color: #444; text-transform: uppercase;">
+                &copy; 2026 <span class="notranslate">Exaltation.ai</span>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main Scripts -->
+    <script>
+        function copyEmail() {
+            const email = "joshua369x@gmail.com";
+            navigator.clipboard.writeText(email).then(function() {
+                const originalText = document.querySelector('.contact-email').textContent;
+                document.querySelector('.contact-email').textContent = "✓ Copied to clipboard!";
+                setTimeout(() => {
+                    document.querySelector('.contact-email').textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

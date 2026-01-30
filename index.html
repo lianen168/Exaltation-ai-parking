@@ -5,26 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXALTATION.AI | The Alchemy of Intelligence</title>
     <meta name="description" content="Premium Domain Asset for Sale. The defining keyword for Knowledge Distillation, Superalignment, and Edge AI Optimization.">
+    <!-- Prevents Google Translate from corrupting the brand name -->
     <meta name="google" content="notranslate">
     <meta name="theme-color" content="#05020a">
-    
+
     <!-- Open Graph & Twitter Cards -->
     <meta property="og:title" content="Exaltation.ai | The Alchemy of Intelligence">
     <meta property="og:description" content="Premium 10-character .ai domain for Knowledge Distillation, TinyML, and Edge AI optimization.">
-    <meta property="og:image" content="https://exaltation.ai/og-image.jpg">
     <meta property="og:url" content="https://exaltation.ai">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Exaltation.ai - Premium AI Domain Asset">
-    <meta name="twitter:description" content="The defining keyword for Knowledge Distillation and Edge AI.">
-    <meta name="twitter:image" content="https://exaltation.ai/twitter-card.jpg">
-    
-    <link rel="canonical" href="https://exaltation.ai">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Critical CSS (Inlined for Performance) -->
+
     <style>
         :root {
             --bg-body: #05020a;
@@ -37,12 +32,11 @@
             --accent-blue: #3b82f6;
             --border: rgba(139, 92, 246, 0.15);
             --glow: rgba(139, 92, 246, 0.1);
-            --glow-subtle: rgba(139, 92, 246, 0.05);
             --glow-strong: rgba(139, 92, 246, 0.2);
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             background-color: var(--bg-body);
             color: var(--text-main);
@@ -50,132 +44,157 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         .notranslate { translate: no; }
         h1, h2, h3, .brand-font { font-family: 'Space Grotesk', sans-serif; }
         a { text-decoration: none; color: inherit; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
+
         /* Skip Link */
         .skip-link {
             position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--accent-purple);
-            color: white;
-            padding: 8px 16px;
-            z-index: 1000;
-            font-weight: 600;
+            top: -40px; left: 0;
+            background: var(--accent-purple); color: white;
+            padding: 8px 16px; z-index: 1000; font-weight: 600;
         }
         .skip-link:focus { top: 0; }
-        
+
         /* Header */
         header {
             padding: 20px 0;
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
+            position: sticky; top: 0;
             background: rgba(5, 2, 10, 0.9);
             backdrop-filter: blur(12px);
             z-index: 100;
         }
-        
+
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; color: #fff; }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
+        .mobile-menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO SECTION & TYPOGRAPHY --- */
         .hero {
             padding: 100px 0 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-        
+
+        /* Ambient Background Particles */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: 
-                radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.03) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
             z-index: -1;
             animation: particle-float 20s linear infinite;
         }
-        
+
         @keyframes particle-float {
-            0% { background-position: 0% 0%, 0% 0%; }
-            100% { background-position: 100% 100%, -100% -100%; }
+            0% { background-position: 0% 0%; transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { background-position: 100% 100%; transform: scale(1); }
         }
-        
+
+        /* MEGA TITLE CONTAINER */
         .mega-title {
-            font-size: clamp(2.2rem, 8vw + 1rem, 7.5rem);
+            /* Responsive clamping: Fits perfectly from iPhone SE to 4K screens */
+            font-size: clamp(2.5rem, 9vw, 7.5rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.02em;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             display: flex;
             justify-content: center;
             align-items: baseline;
             flex-wrap: wrap;
-            gap: 0;
+            gap: 10px;
         }
-        
-        /* Exaltation - Purification Effect */
+
+        /* PART 1: EXALTATION (Transmutation Flow Effect) */
         .title-word {
-            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            position: relative;
+            /* Gradient: Deep Purple -> Cyan -> Gold (The Alchemy Spectrum) */
+            background: linear-gradient(
+                120deg, 
+                #a855f7 0%, 
+                #3b82f6 25%, 
+                #06b6d4 50%, 
+                #f59e0b 75%, 
+                #a855f7 100%
+            );
+            background-size: 300% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: purification-rise 5s ease-in-out infinite;
-            position: relative;
+            
+            /* Flow Animation */
+            animation: 
+                alchemy-flow 8s linear infinite, 
+                ascension-levitate 6s ease-in-out infinite;
+            
+            /* Soft Glow Filter */
+            filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
         }
-        
-        .title-word::before {
-            content: '';
+
+        /* Ghost effect behind the text for depth */
+        .title-word::after {
+            content: 'Exaltation';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, transparent 0%, #06b6d4 50%, transparent 100%);
-            opacity: 0;
-            animation: purification-glow 5s ease-in-out infinite;
+            left: 0; top: 0;
+            z-index: -1;
+            background: inherit;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: blur(15px);
+            opacity: 0.6;
+            animation: alchemy-flow 8s linear infinite;
         }
-        
-        /* .AI - Crystalline Effect */
+
+        /* PART 2: .AI (The Golden Spark) */
         .title-tld {
+            font-family: 'Space Grotesk', monospace;
             color: var(--accent-gold);
             -webkit-text-fill-color: var(--accent-gold);
-            font-weight: 400;
-            font-style: italic;
-            margin-left: 2px;
-            animation: crystallization 3s ease-in-out infinite;
+            font-weight: 300;
+            
+            /* Intense Gold Glow */
+            text-shadow: 
+                0 0 10px rgba(251, 191, 36, 0.5),
+                0 0 20px rgba(251, 191, 36, 0.3);
+            
+            /* Animation: Energetic Flicker */
+            animation: spark-flicker 4s infinite;
         }
+
+        /* ANIMATION KEYFRAMES */
         
-        @keyframes purification-rise {
+        /* 1. Alchemy Flow: Moves the gradient texture */
+        @keyframes alchemy-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        /* 2. Ascension: Gentle lifting movement */
+        @keyframes ascension-levitate {
             0%, 100% { transform: translateY(0); }
-            25% { transform: translateY(-5px); }
             50% { transform: translateY(-10px); }
-            75% { transform: translateY(-5px); }
         }
-        
-        @keyframes purification-glow {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 0.3; }
+
+        /* 3. Spark: Intelligence pulse */
+        @keyframes spark-flicker {
+            0%, 100% { opacity: 0.8; text-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+            5% { opacity: 1; text-shadow: 0 0 30px rgba(251, 191, 36, 0.8); }
+            10% { opacity: 0.8; text-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+            50% { opacity: 0.9; }
         }
-        
-        @keyframes crystallization {
-            0%, 100% { opacity: 0.7; text-shadow: 0 0 5px var(--accent-gold); }
-            50% { opacity: 1; text-shadow: 0 0 20px var(--accent-gold), 0 0 40px var(--accent-gold); }
-        }
-        
+
+
         .hero-sub {
             font-size: 1.25rem;
             color: var(--text-muted);
@@ -183,9 +202,9 @@
             margin: 25px auto 60px;
             font-weight: 300;
         }
-        
+
         .highlight-term { color: var(--accent-gold); font-weight: 600; }
-        
+
         /* Pricing Card */
         .price-hero-card {
             background: var(--bg-card);
@@ -197,7 +216,7 @@
             box-shadow: 0 0 60px rgba(139, 92, 246, 0.15);
             position: relative;
         }
-        
+
         .status-badge {
             position: absolute;
             top: -12px;
@@ -213,10 +232,10 @@
             letter-spacing: 1px;
             white-space: nowrap;
         }
-        
+
         .price-main { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 5px; }
         .price-sub { font-size: 1.1rem; color: var(--accent-gold); margin-bottom: 20px; }
-        
+
         .buy-btn {
             display: block;
             width: 100%;
@@ -231,13 +250,13 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .buy-btn:hover { 
             transform: translateY(-3px); 
             box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
             background: var(--accent-gold);
         }
-        
+
         /* Social Proof */
         .social-proof {
             padding: 60px 0;
@@ -245,14 +264,14 @@
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .proof-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .proof-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
@@ -261,585 +280,10 @@
             text-align: center;
             transition: all 0.3s;
         }
-        
+
         .proof-card:hover {
             border-color: var(--accent-purple);
             transform: translateY(-5px);
         }
-        
-        .proof-card img {
-            height: 40px;
-            margin-bottom: 15px;
-            opacity: 0.8;
-        }
-        
-        .proof-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-        
-        .proof-source {
-            font-size: 0.85rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-        }
-        
-        /* Section Header */
-        .section-header {
-            text-align: center;
-            margin: 100px 0 60px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--accent-purple);
-        }
-        
-        .section-header p {
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 30px auto 0;
-        }
-        
-        /* 9 Grid Section */
-        .grid-9 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-        
-        .card {
-            background: linear-gradient(145deg, #130a1e 0%, #05020a 100%);
-            border: 1px solid var(--border);
-            padding: 35px;
-            border-radius: 8px;
-            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-        }
-        
-        .card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-10px);
-            box-shadow: 
-                0 20px 50px -15px var(--glow-strong),
-                inset 0 0 30px var(--glow-subtle);
-        }
-        
-        .card h3 { 
-            font-size: 1.3rem; 
-            margin-bottom: 15px; 
-            color: #fff; 
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-        }
-        
-        .card h3 i { color: var(--accent-purple); transition: color 0.3s; }
-        .card:hover h3 i { color: var(--accent-gold); }
-        
-        .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
-        
-        .data-proof {
-            font-size: 0.85rem;
-            color: var(--accent-gold);
-            font-family: monospace;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 12px;
-            display: block;
-            opacity: 0.9;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 0;
-            background: var(--bg-card);
-        }
-        
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .faq-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            padding: 25px;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        
-        .faq-item:hover {
-            border-color: var(--accent-purple);
-            transform: translateX(5px);
-        }
-        
-        .faq-item h3 {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 10px;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .faq-item p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-        
-        /* Newsletter */
-        .newsletter {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #0f0718 0%, #05020a 100%);
-        }
-        
-        .newsletter h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        
-        .newsletter p {
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-        
-        #newsletter-form {
-            display: flex;
-            max-width: 500px;
-            margin: 0 auto;
-            gap: 10px;
-        }
-        
-        #newsletter-form input {
-            flex: 1;
-            padding: 12px 20px;
-            border: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-        
-        #newsletter-form button {
-            background: var(--accent-purple);
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        #newsletter-form button:hover {
-            background: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-        
-        /* Social Share */
-        .social-share {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .social-share span {
-            color: var(--text-muted);
-            margin-right: 20px;
-        }
-        
-        .social-share a {
-            color: var(--accent-purple);
-            margin: 0 10px;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-        
-        .social-share a:hover {
-            color: var(--accent-gold);
-        }
-        
-        /* Footer */
-        footer {
-            margin-top: 80px;
-            padding: 60px 0;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            background: #020105;
-        }
-        
-        .contact-email {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-            border-bottom: 2px solid var(--accent-gold);
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Space Grotesk';
-            display: inline-block;
-            padding: 10px 20px;
-        }
-        
-        .contact-email:hover { 
-            color: var(--accent-gold); 
-            border-bottom-color: transparent;
-            background: rgba(251, 191, 36, 0.1);
-        }
-        
-        .legal-links {
-            margin: 30px 0;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        .legal-links a {
-            color: var(--accent-purple);
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        
-        .legal-links a:hover {
-            color: var(--accent-gold);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .mobile-menu.active {
-            display: flex;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .grid-9 { grid-template-columns: 1fr; }
-            .faq-grid { grid-template-columns: 1fr; }
-            .proof-grid { grid-template-columns: 1fr; }
-            .mobile-menu-btn { display: block; }
-            .hero { padding: 60px 0 40px; }
-            .section-header { margin: 60px 0 40px; }
-            .mega-title { gap: 0; }
-        }
-        
-        @media (hover: none) {
-            .card {
-                transform: none !important;
-            }
-            .card:active {
-                transform: scale(0.98);
-                transition: transform 0.1s;
-            }
-            .buy-btn:active {
-                transform: scale(0.95);
-            }
-        }
-    </style>
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
-        <div class="container nav-flex">
-            <div class="logo notranslate">EXALTATION.AI</div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank" class="buy-btn" style="width: auto; padding: 10px 24px; margin:0; font-size: 0.9rem; border:none; background: #fff; color: #000;">
-                Purchase Asset
-            </a>
-        </div>
-        <nav class="mobile-menu" id="mobileMenu">
-            <a href="#purchase">Purchase</a>
-            <a href="#verticals">Verticals</a>
-            <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank">Afternic Listing</a>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="main-content">
-        <div class="container">
-            <div class="mega-title notranslate">
-                <span class="title-word">Exaltation</span><span class="title-tld">.AI</span>
-            </div>
-            
-            <p class="hero-sub">
-                In Alchemy, it means Purification. In 2026, it is the definitive term for <span class="highlight-term">Knowledge Distillation</span>, <span class="highlight-term">Model Quantization</span>, and <span class="highlight-term">Superalignment</span>.
-            </p>
-
-            <div id="purchase" class="price-hero-card">
-                <span class="status-badge">Category Defining Asset</span>
-                <div class="price-main">$42,000 <span style="font-size:1rem; color:#888; font-weight:400;">USD</span></div>
-                <div class="price-sub">or $3,500/mo via 12-Month Financing</div>
-                
-                <a href="https://www.afternic.com/domain/Exaltation.ai" target="_blank" class="buy-btn">
-                    Secure This Asset Now <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px; font-size: 0.8em;"></i>
-                </a>
-                
-                <p style="font-size: 0.85rem; color: #666;">
-                    <i class="fa-solid fa-shield-halved"></i> Secured Escrow Transaction via Afternic/GoDaddy
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="section-header">
-                <h2>Industry Validation</h2>
-                <p>Why leading voices in AI recognize the strategic value of Exaltation.ai</p>
-            </div>
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <img src="image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%238b5cf6'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='white' font-size='12'%3EHF%3C/text%3E%3C/svg%3E" alt="Hugging Face">
-                    <p>"Knowledge distillation is a key technique for deploying large models to edge devices."</p>
-                    <span class="proof-source">— Hugging Face Documentation</span>
-                </div>
-                <div class="proof-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='10' width='80' height='80' fill='%23fbbf24'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='black' font-size='10'%3EGARTNER%3C/text%3E%3C/svg%3E" alt="Gartner">
-                    <p>"Edge AI optimization is a Top 10 Strategic Technology Trend for 2026."</p>
-                    <span class="proof-source">— Gartner Report 2025</span>
-                </div>
-                <div class="proof-card">
-                    <img src="image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%230f0718'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='white' font-size='8'%3ECRUNCHBASE%3C/text%3E%3C/svg%3E" alt="Crunchbase">
-                    <p>"TinyML startups raised $1.7B in 2024, up 45% YoY."</p>
-                    <span class="proof-source">— Crunchbase Data</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9 VERTICALS -->
-    <section id="verticals">
-        <div class="container">
-            <div class="section-header">
-                <h2>9 Pillars of Exaltation</h2>
-                <p>From TinyML to Superintelligence: Why this word defines the next decade of AI.</p>
-            </div>
-
-            <div class="grid-9">
-                <div class="card">
-                    <h3><i class="fa-solid fa-filter"></i> Knowledge Distillation</h3>
-                    <p>The alchemical process of "Teacher-Student" compression. Exaltation represents the purification of massive LLMs into efficient Edge models.</p>
-                    <span class="data-proof">Arxiv Papers (2025): 12,500+ | Trend: Up</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-microchip"></i> TinyML & Edge AI</h3>
-                    <p>Running intelligence on silicon limits. "Exalting" a model means maximizing performance per watt. The core narrative of the post-cloud era.</p>
-                    <span class="data-proof">Market CAGR: 37.4% (Gartner)</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-scale-balanced"></i> AGI Superalignment</h3>
-                    <p>We do not just want AI to obey; we want it to be "Exalted"—elevated to human values but purified of human bias.</p>
-                    <span class="data-proof">Safety Research Grants: $500M+</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-database"></i> Synthetic Data Alchemy</h3>
-                    <p>Turning raw, noisy web data (lead) into high-quality training tokens (gold). Exaltation is the standard for Data Curation.</p>
-                    <span class="data-proof">Sector Valuation: $4.5B</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-heart-pulse"></i> Affective Computing</h3>
-                    <p>AI that elevates the human emotional state. "Exaltation" is the clinical term for a state of extreme well-being and peak flow.</p>
-                    <span class="data-proof">Mental Health Tech: High Growth</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Creativity</h3>
-                    <p>When AI moves from imitation to sublimation. Creating art that induces a sense of the sublime (Exaltation) in the viewer.</p>
-                    <span class="data-proof">GenAI Market: Multi-Trillion</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-atom"></i> Quantum States</h3>
-                    <p>In physics, particles in high-energy states are "excited" or exalted. The perfect brand for Quantum-AI hybrid algorithms.</p>
-                    <span class="data-proof">Deep Tech Investment: Tier 1</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-brain"></i> BCI & Transhumanism</h3>
-                    <p>The ultimate goal: The exaltation of human intelligence via Brain-Computer Interfaces. Merging biological and silicon minds.</p>
-                    <span class="data-proof">Neuralink/Sync: High Visibility</span>
-                </div>
-
-                <div class="card">
-                    <h3><i class="fa-solid fa-chart-line"></i> FinTech & Alpha</h3>
-                    <p>In Astrology, a planet in "Exaltation" is at its peak power. For FinTech AI, this implies maximum Alpha and dominant returns.</p>
-                    <span class="data-proof">Hedge Fund Branding: Premium</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about acquiring Exaltation.ai</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Why is this domain priced at $42,000?</h3>
-                    <p>10-character .ai domains are highly scarce. Exaltation combines linguistic depth with multi-vertical applicability across TinyML, AGI, and Edge AI. Comparable sales include execute.ai ($90,000) and experiential.ai ($15,000).</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is there any trademark risk?</h3>
-                    <p>No. "Exaltation" is a generic English word with no active trademark conflicts in software/AI categories (USPTO verified). It's a safe, public domain term.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What payment options are available?</h3>
-                    <p>One-time payment via escrow, or 12-month financing at $3,500/month. All transactions secured via Afternic/GoDaddy with full legal protection.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Who is the ideal buyer for this domain?</h3>
-                    <p>TinyML startups, MLOps platforms, edge AI chip companies, and AGI research labs seeking a premium brand that conveys technical depth and cultural sophistication.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is the connection between Exaltation and Knowledge Distillation?</h3>
-                    <p>In alchemy, "exaltation" refers to the purification of substances through fire. This perfectly mirrors the AI process of distilling large models into smaller, more efficient versions while preserving core intelligence.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long will this domain be available?</h3>
-                    <p>Exaltation.ai is currently listed for sale. Serious inquiries are encouraged to contact us directly for acquisition details and timeline information.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-        <div class="container">
-            <h3>Stay Updated on AI Domain Opportunities</h3>
-            <p>Join our exclusive list for premium .ai domain releases and market insights.</p>
-            <form id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will notify you of premium AI domain opportunities.');">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- SOCIAL SHARE -->
-    <section class="social-share">
-        <span>Share this opportunity:</span>
-        <a href="https://twitter.com/intent/tweet?url=https://exaltation.ai&text=Exaltation.ai - The defining domain for Knowledge Distillation and Edge AI" target="_blank">
-            <i class="fa-brands fa-twitter"></i> Twitter
-        </a>
-        <a href="https://www.linkedin.com/shareArticle?url=https://exaltation.ai" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://news.ycombinator.com/submitlink?u=https://exaltation.ai&t=Exaltation.ai - Premium AI Domain Asset" target="_blank">
-            <i class="fa-brands fa-hacker-news"></i> Hacker News
-        </a>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <h3 style="margin-bottom: 20px; color: #fff;">Acquire This Legacy Brand</h3>
-            
-            <div class="contact-email" onclick="copyEmail()">
-                joshua369x@gmail.com
-            </div>
-            
-            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Click email to copy to clipboard</p>
-            
-            <p class="legal-links">
-                <a href="/privacy-policy">Privacy Policy</a> • 
-                <a href="/terms-of-service">Terms of Service</a> • 
-                <a href="/sitemap.xml">Sitemap</a>
-            </p>
-            
-            <p style="margin-top: 30px; font-size: 0.75rem; color: #444; text-transform: uppercase;">
-                &copy; 2026 <span class="notranslate">Exaltation.ai</span>. All Rights Reserved.
-            </p>
-        </div>
-    </footer>
-
-    <!-- GA4 Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-        
-        // Event tracking
-        document.querySelector('.buy-btn').addEventListener('click', () => {
-            gtag('event', 'purchase_click', {
-                'event_category': 'Domain Sale',
-                'event_label': 'Exaltation.ai',
-                'value': 42000
-            });
-        });
-        
-        document.querySelector('.contact-email').addEventListener('click', () => {
-            gtag('event', 'email_copy', {
-                'event_category': 'Contact',
-                'event_label': 'Email Copied'
-            });
-        });
-        
-        // Scroll depth tracking
-        let scrollDepthTracked = false;
-        window.addEventListener('scroll', () => {
-            if (!scrollDepthTracked && window.scrollY > document.body.scrollHeight * 0.5) {
-                gtag('event', 'scroll_50%', { 'event_category': 'Engagement' });
-                scrollDepthTracked = true;
-            }
-        });
-        
-        // Time on page tracking
-        setTimeout(() => {
-            gtag('event', 'time_on_page_30s', { 'event_category': 'Engagement' });
-        }, 30000);
-    </script>
-
-    <!-- Main Scripts -->
-    <script>
-        function copyEmail() {
-            const email = "joshua369x@gmail.com";
-            navigator.clipboard.writeText(email).then(function() {
-                const originalText = document.querySelector('.contact-email').textContent;
-                document.querySelector('.contact-email').textContent = "✓ Copied to clipboard!";
-                setTimeout(() => {
-                    document.querySelector('.contact-email').textContent = originalText;
-                }, 2000);
-            });
-        }
-        
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+        .proof-card img { heig
